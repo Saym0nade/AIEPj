@@ -1,0 +1,15 @@
+{
+  "Age": 18,
+  "Sleep_Quality_Score": 1,
+  "Perceived_Stress_Score": 21.0,
+  "Academic_Performance_GPA": 2.59,
+  "Sleep_Duration_Hours": 5.5,
+  "Daily_Usage_Hours": 8.0,
+  "Weekend_Extra_Hours": 1.5,
+  "Gender": "Female",
+  "Academic_Level": "Undergraduate",
+  "Primary_Platform": "TikTok",
+  "Device_Type": "Smartphone",
+  "Social_Comparison_Frequency": "Sometimes",
+  "Late_Night_Usage": "True"
+}

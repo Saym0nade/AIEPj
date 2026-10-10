@@ -1,0 +1,110 @@
+{
+  "profile": {
+    "Age": 18,
+    "Sleep_Quality_Score": 1,
+    "Perceived_Stress_Score": 21.0,
+    "Academic_Performance_GPA": 2.59,
+    "Sleep_Duration_Hours": 5.5,
+    "Daily_Usage_Hours": 8.0,
+    "Weekend_Extra_Hours": 1.5,
+    "Gender": "Female",
+    "Academic_Level": "Undergraduate",
+    "Primary_Platform": "TikTok",
+    "Device_Type": "Smartphone",
+    "Social_Comparison_Frequency": "Sometimes",
+    "Late_Night_Usage": "True"
+  },
+  "current_prediction": 66.4483642578125,
+  "target": 80.0,
+  "counterfactuals": [
+    {
+      "counterfactual": {
+        "Age": 18,
+        "Sleep_Quality_Score": 1,
+        "Perceived_Stress_Score": 21.0,
+        "Academic_Performance_GPA": 2.59,
+        "Sleep_Duration_Hours": 5.5,
+        "Daily_Usage_Hours": 0.0,
+        "Weekend_Extra_Hours": 1.5,
+        "Gender": "Female",
+        "Academic_Level": "Undergraduate",
+        "Primary_Platform": "TikTok",
+        "Device_Type": "Smartphone",
+        "Social_Comparison_Frequency": "Sometimes",
+        "Late_Night_Usage": "True"
+      },
+      "prediction": 86.79407501220703,
+      "changes": {
+        "Daily_Usage_Hours": [
+          8.0,
+          0.0
+        ]
+      },
+      "num_changes": 1,
+      "distance": 1.0,
+      "met_target": true
+    },
+    {
+      "counterfactual": {
+        "Age": 18,
+        "Sleep_Quality_Score": 1,
+        "Perceived_Stress_Score": 21.0,
+        "Academic_Performance_GPA": 2.59,
+        "Sleep_Duration_Hours": 6.0,
+        "Daily_Usage_Hours": 2.0,
+        "Weekend_Extra_Hours": 1.5,
+        "Gender": "Female",
+        "Academic_Level": "Undergraduate",
+        "Primary_Platform": "TikTok",
+        "Device_Type": "Smartphone",
+        "Social_Comparison_Frequency": "Sometimes",
+        "Late_Night_Usage": "True"
+      },
+      "prediction": 82.98861694335938,
+      "changes": {
+        "Sleep_Duration_Hours": [
+          5.5,
+          6.0
+        ],
+        "Daily_Usage_Hours": [
+          8.0,
+          2.0
+        ]
+      },
+      "num_changes": 2,
+      "distance": 0.8333333333333334,
+      "met_target": true
+    },
+    {
+      "counterfactual": {
+        "Age": 18,
+        "Sleep_Quality_Score": 1,
+        "Perceived_Stress_Score": 21.0,
+        "Academic_Performance_GPA": 2.59,
+        "Sleep_Duration_Hours": 7.0,
+        "Daily_Usage_Hours": 0.3,
+        "Weekend_Extra_Hours": 1.5,
+        "Gender": "Female",
+        "Academic_Level": "Undergraduate",
+        "Primary_Platform": "TikTok",
+        "Device_Type": "Smartphone",
+        "Social_Comparison_Frequency": "Sometimes",
+        "Late_Night_Usage": "True"
+      },
+      "prediction": 90.07208251953125,
+      "changes": {
+        "Sleep_Duration_Hours": [
+          5.5,
+          7.0
+        ],
+        "Daily_Usage_Hours": [
+          8.0,
+          0.3
+        ]
+      },
+      "num_changes": 2,
+      "distance": 1.2125,
+      "met_target": true
+    }
+  ]
+}

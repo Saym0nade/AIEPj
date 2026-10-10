@@ -1,0 +1,119 @@
+{
+  "numeric": [
+    "Age",
+    "Sleep_Quality_Score",
+    "Perceived_Stress_Score",
+    "Academic_Performance_GPA",
+    "Sleep_Duration_Hours",
+    "Daily_Usage_Hours",
+    "Weekend_Extra_Hours"
+  ],
+  "categorical": [
+    "Gender",
+    "Academic_Level",
+    "Primary_Platform",
+    "Device_Type",
+    "Social_Comparison_Frequency",
+    "Late_Night_Usage"
+  ],
+  "ohe_categories": {
+    "Gender": [
+      "Female",
+      "Male",
+      "Non-Binary",
+      "Prefer not to say"
+    ],
+    "Academic_Level": [
+      "High School",
+      "Postgraduate",
+      "Undergraduate"
+    ],
+    "Primary_Platform": [
+      "Instagram",
+      "LinkedIn",
+      "Reddit",
+      "Snapchat",
+      "TikTok",
+      "X (Twitter)",
+      "YouTube"
+    ],
+    "Device_Type": [
+      "Laptop/PC",
+      "Smartphone",
+      "Tablet"
+    ],
+    "Social_Comparison_Frequency": [
+      "Always",
+      "Frequently",
+      "Never",
+      "Rarely",
+      "Sometimes"
+    ],
+    "Late_Night_Usage": [
+      "False",
+      "True"
+    ]
+  },
+  "n_features_in": 13,
+  "n_features_out": 31,
+  "feature_names_out": [
+    "Age",
+    "Sleep_Quality_Score",
+    "Perceived_Stress_Score",
+    "Academic_Performance_GPA",
+    "Sleep_Duration_Hours",
+    "Daily_Usage_Hours",
+    "Weekend_Extra_Hours",
+    "Gender_Female",
+    "Gender_Male",
+    "Gender_Non-Binary",
+    "Gender_Prefer not to say",
+    "Academic_Level_High School",
+    "Academic_Level_Postgraduate",
+    "Academic_Level_Undergraduate",
+    "Primary_Platform_Instagram",
+    "Primary_Platform_LinkedIn",
+    "Primary_Platform_Reddit",
+    "Primary_Platform_Snapchat",
+    "Primary_Platform_TikTok",
+    "Primary_Platform_X (Twitter)",
+    "Primary_Platform_YouTube",
+    "Device_Type_Laptop/PC",
+    "Device_Type_Smartphone",
+    "Device_Type_Tablet",
+    "Social_Comparison_Frequency_Always",
+    "Social_Comparison_Frequency_Frequently",
+    "Social_Comparison_Frequency_Never",
+    "Social_Comparison_Frequency_Rarely",
+    "Social_Comparison_Frequency_Sometimes",
+    "Late_Night_Usage_False",
+    "Late_Night_Usage_True"
+  ],
+  "actionable": [
+    "Sleep_Duration_Hours",
+    "Daily_Usage_Hours",
+    "Primary_Platform",
+    "Device_Type"
+  ],
+  "immutable": [
+    "Age",
+    "Gender",
+    "Academic_Level",
+    "Sleep_Quality_Score",
+    "Social_Comparison_Frequency",
+    "Perceived_Stress_Score",
+    "Late_Night_Usage",
+    "Weekend_Extra_Hours",
+    "Academic_Performance_GPA"
+  ],
+  "permitted_range": {
+    "Sleep_Duration_Hours": [
+      4.0,
+      10.0
+    ],
+    "Daily_Usage_Hours": [
+      0.0,
+      8.0
+    ]
+  }
+}

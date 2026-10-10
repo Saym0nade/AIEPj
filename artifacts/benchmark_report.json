@@ -1,0 +1,26 @@
+{
+  "latency_ms": {
+    "p50_ms": 139.55159249599092,
+    "p95_ms": 152.9135430497263,
+    "p99_ms": 157.93607112165805,
+    "mean_ms": 139.64636677024828
+  },
+  "memory_mb": {
+    "peak_rss_mb": 291.8984375,
+    "current_rss_mb": 289.53515625
+  },
+  "payload": {
+    "onnx_int8_mb": 0.007886886596679688,
+    "preprocessor_kb": 4.3427734375
+  },
+  "budgets": {
+    "latency_budget_ms": 200.0,
+    "memory_budget_mb": 1024.0,
+    "model_size_budget_mb": 5.0
+  },
+  "pass": {
+    "latency_p95": true,
+    "memory_peak": true,
+    "model_size": true
+  }
+}

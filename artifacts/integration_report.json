@@ -1,0 +1,199 @@
+{
+  "status": "pass",
+  "tests": {
+    "command": "PYTHONPATH=src ./.venv/bin/python -m pytest tests/ -q",
+    "passed": 26,
+    "failed": 0
+  },
+  "metrics": {
+    "mlp": {
+      "cv_mae": 4.672503852844239,
+      "cv_mae_std": 0.16104312286547126,
+      "holdout_mae": 4.568729400634766,
+      "rmse": 5.752615292424544
+    },
+    "lightgbm": {
+      "holdout_mae": 4.9667086127723445,
+      "rmse": 6.127218506362829
+    },
+    "selected": "mlp",
+    "n_train": 3495,
+    "n_test": 874,
+    "deployed": "mlp"
+  },
+  "benchmark": {
+    "latency_ms": {
+      "p50_ms": 158.16131649989984,
+      "p95_ms": 170.39244145671546,
+      "p99_ms": 177.66314039967267,
+      "mean_ms": 150.2851780103083
+    },
+    "memory_mb": {
+      "peak_rss_mb": 206.625,
+      "current_rss_mb": 207.55859375
+    },
+    "payload": {
+      "onnx_int8_mb": 0.007886886596679688,
+      "preprocessor_kb": 4.3427734375
+    },
+    "budgets": {
+      "latency_budget_ms": 200.0,
+      "memory_budget_mb": 1024.0,
+      "model_size_budget_mb": 5.0
+    },
+    "pass": {
+      "latency_p95": true,
+      "memory_peak": true,
+      "model_size": true
+    }
+  },
+  "spec_checks": {
+    "payload": {
+      "value_mb": 0.007887,
+      "budget_mb": 5.0,
+      "pass": true
+    },
+    "latency_p95_ms": {
+      "value_ms": 170.39244145671546,
+      "budget_ms": 200.0,
+      "p50_ms": 158.16131649989984,
+      "p99_ms": 177.66314039967267,
+      "pass": true
+    },
+    "peak_rss_mb": {
+      "value_mb": 206.625,
+      "budget_mb": 1024.0,
+      "pass": true
+    },
+    "immutable_invariant": {
+      "pass": true,
+      "detail": "all returned CFs keep IMMUTABLE_FEATURES identical and only touch ACTIONABLE_FEATURES"
+    },
+    "bounds": {
+      "pass": true,
+      "detail": "continuous actionable values within config.PERMITTED_RANGE"
+    },
+    "onnx_only_runtime": {
+      "pass": true,
+      "detail": "import smcii.runtime, smcii.counterfactual, smcii.cli -> 'torch' in sys.modules == False"
+    }
+  },
+  "example": {
+    "profile": {
+      "Age": 18,
+      "Sleep_Quality_Score": 1,
+      "Perceived_Stress_Score": 21.0,
+      "Academic_Performance_GPA": 2.59,
+      "Sleep_Duration_Hours": 5.5,
+      "Daily_Usage_Hours": 8.0,
+      "Weekend_Extra_Hours": 1.5,
+      "Gender": "Female",
+      "Academic_Level": "Undergraduate",
+      "Primary_Platform": "TikTok",
+      "Device_Type": "Smartphone",
+      "Social_Comparison_Frequency": "Sometimes",
+      "Late_Night_Usage": "True"
+    },
+    "current_prediction": 66.4483642578125,
+    "target": 80.0,
+    "suggestions": [
+      {
+        "counterfactual": {
+          "Age": 18,
+          "Sleep_Quality_Score": 1,
+          "Perceived_Stress_Score": 21.0,
+          "Academic_Performance_GPA": 2.59,
+          "Sleep_Duration_Hours": 5.5,
+          "Daily_Usage_Hours": 0.0,
+          "Weekend_Extra_Hours": 1.5,
+          "Gender": "Female",
+          "Academic_Level": "Undergraduate",
+          "Primary_Platform": "TikTok",
+          "Device_Type": "Smartphone",
+          "Social_Comparison_Frequency": "Sometimes",
+          "Late_Night_Usage": "True"
+        },
+        "prediction": 86.79407501220703,
+        "changes": {
+          "Daily_Usage_Hours": [
+            8.0,
+            0.0
+          ]
+        },
+        "num_changes": 1,
+        "distance": 1.0,
+        "met_target": true
+      },
+      {
+        "counterfactual": {
+          "Age": 18,
+          "Sleep_Quality_Score": 1,
+          "Perceived_Stress_Score": 21.0,
+          "Academic_Performance_GPA": 2.59,
+          "Sleep_Duration_Hours": 6.0,
+          "Daily_Usage_Hours": 2.0,
+          "Weekend_Extra_Hours": 1.5,
+          "Gender": "Female",
+          "Academic_Level": "Undergraduate",
+          "Primary_Platform": "TikTok",
+          "Device_Type": "Smartphone",
+          "Social_Comparison_Frequency": "Sometimes",
+          "Late_Night_Usage": "True"
+        },
+        "prediction": 82.98861694335938,
+        "changes": {
+          "Sleep_Duration_Hours": [
+            5.5,
+            6.0
+          ],
+          "Daily_Usage_Hours": [
+            8.0,
+            2.0
+          ]
+        },
+        "num_changes": 2,
+        "distance": 0.8333333333333334,
+        "met_target": true
+      },
+      {
+        "counterfactual": {
+          "Age": 18,
+          "Sleep_Quality_Score": 1,
+          "Perceived_Stress_Score": 21.0,
+          "Academic_Performance_GPA": 2.59,
+          "Sleep_Duration_Hours": 7.0,
+          "Daily_Usage_Hours": 0.3,
+          "Weekend_Extra_Hours": 1.5,
+          "Gender": "Female",
+          "Academic_Level": "Undergraduate",
+          "Primary_Platform": "TikTok",
+          "Device_Type": "Smartphone",
+          "Social_Comparison_Frequency": "Sometimes",
+          "Late_Night_Usage": "True"
+        },
+        "prediction": 90.07208251953125,
+        "changes": {
+          "Sleep_Duration_Hours": [
+            5.5,
+            7.0
+          ],
+          "Daily_Usage_Hours": [
+            8.0,
+            0.3
+          ]
+        },
+        "num_changes": 2,
+        "distance": 1.2125,
+        "met_target": true
+      }
+    ]
+  },
+  "notes": [
+    "Full test suite: 26 passed, 0 failed.",
+    "Notebook main.ipynb re-executed end-to-end; counterfactual demo and benchmark cells now show real output (no not-ready/ImportError notes).",
+    "Benchmark regenerated via python -m smcii.benchmark: p95=170.39ms, peak RSS=206.6MB, int8=0.0079MB.",
+    "scripts/verify_pipeline.py: 8/8 checks passed, exit 0.",
+    "Example profile is a real low-scoring test-split row (actual target 66); all 3 suggestions meet target 80.",
+    "All dataset files and artifacts live under the project root (data/, artifacts/)."
+  ]
+}
